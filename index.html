@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Competitor Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Market intelligence</p>
+          <h1>Competitor dashboard</h1>
+        </div>
+        <div class="status-pill">Live-ish snapshot</div>
+      </header>
+
+      <main class="dashboard">
+        <section class="kpis">
+          <article class="card kpi-card accent-blue">
+            <span class="label">Total market share</span>
+            <strong>42.8%</strong>
+            <small>+2.4% vs last month</small>
+          </article>
+          <article class="card kpi-card accent-green">
+            <span class="label">Avg. growth</span>
+            <strong>18.6%</strong>
+            <small>Momentum improving</small>
+          </article>
+          <article class="card kpi-card accent-gold">
+            <span class="label">Customer sentiment</span>
+            <strong>4.5/5</strong>
+            <small>Strong brand love</small>
+          </article>
+          <article class="card kpi-card accent-pink">
+            <span class="label">Win rate</span>
+            <strong>31.2%</strong>
+            <small>Up from 27.9%</small>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="card chart-card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Performance</p>
+                <h2>Revenue trend</h2>
+              </div>
+              <button class="ghost-button">Quarter</button>
+            </div>
+
+            <div class="chart-area">
+              <div class="bars" id="revenueBars"></div>
+            </div>
+          </article>
+
+          <aside class="card summary-card">
+            <div class="card-header compact">
+              <div>
+                <p class="eyebrow">Snapshot</p>
+                <h2>Top movers</h2>
+              </div>
+            </div>
+
+            <ul class="movement-list" id="movementList"></ul>
+          </aside>
+        </section>
+
+        <section class="table-card card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow">Benchmark</p>
+              <h2>Competitor leaderboard</h2>
+            </div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Brand</th>
+                <th>Market share</th>
+                <th>Growth</th>
+                <th>Retention</th>
+                <th>Sentiment</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboardBody"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
