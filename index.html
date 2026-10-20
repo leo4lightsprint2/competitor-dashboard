@@ -50,7 +50,10 @@
                 <p class="eyebrow">Performance</p>
                 <h2>Revenue trend</h2>
               </div>
-              <button class="ghost-button">Quarter</button>
+              <div class="header-actions">
+                <button class="ghost-button">Quarter</button>
+                <button class="cta-button" id="expandTrendBtn">Expand trend</button>
+              </div>
             </div>
 
             <div class="chart-area">
@@ -92,6 +95,21 @@
           </table>
         </section>
       </main>
+    </div>
+
+    <div class="modal-overlay" id="trendModal" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="trendModalTitle">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Performance</p>
+            <h2 id="trendModalTitle">Revenue trend — full view</h2>
+          </div>
+          <button class="modal-close" id="closeTrendModal" aria-label="Close">&times;</button>
+        </div>
+        <div class="chart-area expanded">
+          <div class="bars" id="revenueBarsExpanded"></div>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>

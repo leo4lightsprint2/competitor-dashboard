@@ -20,22 +20,33 @@ const revenueContainer = document.getElementById("revenueBars");
 const movementList = document.getElementById("movementList");
 const leaderboardBody = document.getElementById("leaderboardBody");
 
-revenueData.forEach((value, index) => {
-  const barGroup = document.createElement("div");
-  barGroup.className = "bar-group";
+function renderRevenueBars(container, withValues) {
+  revenueData.forEach((value, index) => {
+    const barGroup = document.createElement("div");
+    barGroup.className = "bar-group";
 
-  const bar = document.createElement("div");
-  bar.className = "bar";
-  bar.style.height = `${value}%`;
+    if (withValues) {
+      const barValue = document.createElement("span");
+      barValue.className = "bar-value";
+      barValue.textContent = value;
+      barGroup.appendChild(barValue);
+    }
 
-  const label = document.createElement("span");
-  label.className = "bar-label";
-  label.textContent = labels[index];
+    const bar = document.createElement("div");
+    bar.className = "bar";
+    bar.style.height = `${value}%`;
 
-  barGroup.appendChild(bar);
-  barGroup.appendChild(label);
-  revenueContainer.appendChild(barGroup);
-});
+    const label = document.createElement("span");
+    label.className = "bar-label";
+    label.textContent = labels[index];
+
+    barGroup.appendChild(bar);
+    barGroup.appendChild(label);
+    container.appendChild(barGroup);
+  });
+}
+
+renderRevenueBars(revenueContainer, false);
 
 movementData.forEach((item) => {
   const li = document.createElement("li");
@@ -61,6 +72,28 @@ movementData.forEach((item) => {
   li.appendChild(company);
   li.appendChild(delta);
   movementList.appendChild(li);
+});
+
+const trendModal = document.getElementById("trendModal");
+const expandedContainer = document.getElementById("revenueBarsExpanded");
+
+document.getElementById("expandTrendBtn").addEventListener("click", () => {
+  renderRevenueBars(expandedContainer, true);
+  trendModal.hidden = false;
+});
+
+function closeTrendModal() {
+  trendModal.hidden = true;
+}
+
+document.getElementById("closeTrendModal").addEventListener("click", closeTrendModal);
+
+trendModal.addEventListener("click", (event) => {
+  if (event.target === trendModal) closeTrendModal();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !trendModal.hidden) closeTrendModal();
 });
 
 competitors.forEach((competitor, index) => {
