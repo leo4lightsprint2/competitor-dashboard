@@ -77,8 +77,9 @@ movementData.forEach((item) => {
 const trendModal = document.getElementById("trendModal");
 const expandedContainer = document.getElementById("revenueBarsExpanded");
 
+renderRevenueBars(expandedContainer, true);
+
 document.getElementById("expandTrendBtn").addEventListener("click", () => {
-  renderRevenueBars(expandedContainer, true);
   trendModal.hidden = false;
 });
 
