@@ -1,16 +1,16 @@
 :root {
-  --bg: #07111f;
-  --bg-soft: #0d1b2d;
-  --panel: rgba(15, 26, 42, 0.9);
-  --panel-strong: #101f33;
-  --line: rgba(148, 163, 184, 0.18);
-  --text: #edf3ff;
-  --muted: #9fb4d1;
-  --blue: #58a6ff;
-  --green: #4ade80;
+  --bg: #071410;
+  --bg-soft: #0c2018;
+  --panel: rgba(12, 32, 24, 0.9);
+  --panel-strong: #0e241b;
+  --line: rgba(163, 201, 184, 0.18);
+  --text: #eafaf1;
+  --muted: #9fc3b2;
+  --blue: #34d399;
+  --green: #2dd4bf;
   --gold: #fbbf24;
   --pink: #f472b6;
-  --shadow: 0 20px 40px rgba(10, 17, 30, 0.45);
+  --shadow: 0 20px 40px rgba(5, 18, 13, 0.45);
 }
 
 * {
@@ -22,8 +22,8 @@ body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   background:
-    radial-gradient(circle at top, rgba(88, 166, 255, 0.2), transparent 22%),
-    linear-gradient(180deg, #091320 0%, #07111f 100%);
+    radial-gradient(circle at top, rgba(52, 211, 153, 0.2), transparent 22%),
+    linear-gradient(180deg, #0a1a14 0%, #071410 100%);
   color: var(--text);
 }
 
@@ -61,9 +61,9 @@ h2 {
 }
 
 .status-pill {
-  border: 1px solid rgba(88, 166, 255, 0.35);
-  background: rgba(88, 166, 255, 0.08);
-  color: #d9ebff;
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  background: rgba(52, 211, 153, 0.08);
+  color: #d9fff0;
   padding: 10px 14px;
   border-radius: 999px;
   font-size: 0.8rem;
@@ -201,9 +201,9 @@ h2 {
   width: 100%;
   max-width: 48px;
   border-radius: 12px 12px 0 0;
-  background: linear-gradient(180deg, #7cc2ff 0%, #3b82f6 100%);
+  background: linear-gradient(180deg, #6ee7b7 0%, #059669 100%);
   min-height: 18px;
-  box-shadow: 0 8px 18px rgba(59, 130, 246, 0.35);
+  box-shadow: 0 8px 18px rgba(16, 185, 129, 0.35);
 }
 
 .bar-label {
@@ -307,8 +307,8 @@ tbody tr:hover {
   min-width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(88, 166, 255, 0.12);
-  color: #dbeafe;
+  background: rgba(52, 211, 153, 0.12);
+  color: #d1fae5;
   font-size: 0.8rem;
   font-weight: 700;
 }
