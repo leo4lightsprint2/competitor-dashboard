@@ -2,10 +2,10 @@ const revenueData = [42, 58, 65, 82, 74, 96];
 const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
 
 const movementData = [
-  { name: "Northstar", delta: "+14.3%", direction: "up", color: "#34d399" },
-  { name: "Orbit Labs", delta: "+9.8%", direction: "up", color: "#4ade80" },
+  { name: "Northstar", delta: "+14.3%", direction: "up", color: "#a855f7" },
+  { name: "Orbit Labs", delta: "+9.8%", direction: "up", color: "#c084fc" },
   { name: "SignalIQ", delta: "-2.1%", direction: "down", color: "#f472b6" },
-  { name: "BluePeak", delta: "+6.7%", direction: "up", color: "#fbbf24" }
+  { name: "BluePeak", delta: "+6.7%", direction: "up", color: "#f0abfc" }
 ];
 
 const competitors = [
